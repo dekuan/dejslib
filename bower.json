@@ -23,7 +23,6 @@
 		"bower_components",
 		"test",
 		"tests",
-		"src",
 		"tools",
 		"composer.json",
 		"karma.conf.js",
