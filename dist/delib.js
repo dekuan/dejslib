@@ -115,6 +115,18 @@ function delib_is_object_with_key( oObj, vKey )
 }
 function $lisowk(){ return delib_is_object_with_key.apply( this, arguments ); }
 
+function delib_is_valid_mobile( sMobile )
+{
+	var regPattern;
+
+	//	...
+	regPattern	= /^(?:13|14|15|16|17|18|19)[0-9]{9}$/;
+
+	return ( $lslen( sMobile ) > 0 &&
+		regPattern.test( sMobile ) );
+}
+function $lisvmob(){ return delib_is_valid_mobile.apply( this, arguments ); }
+
 function delib_has_own( oObj, sKey )
 {
 	if ( ! $liso( oObj ) || 0 === $lslen( sKey, true ) ) 
