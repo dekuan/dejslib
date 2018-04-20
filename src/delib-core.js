@@ -51,7 +51,9 @@ function $lisb(){ return delib_is_bool.apply( this, arguments ); }
 function delib_is_object( oObj )
 {
 	return ( "[object Object]" === Object.prototype.toString.call( oObj ) ||
-		"[object Blob]" === Object.prototype.toString.call( oObj ) );
+		"[object Blob]" === Object.prototype.toString.call( oObj ) ||
+		"[object MessageEvent]" === Object.prototype.toString.call( oObj )
+	);
 }
 function $liso(){ return delib_is_object.apply( this, arguments ); }
 
